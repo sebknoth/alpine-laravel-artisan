@@ -15,5 +15,7 @@ RUN apk upgrade -U && \
 # Small fixes
 RUN rm -fr /var/cache/apk/*
 
+WORKDIR /usr/share/nginx/html
+
 ENTRYPOINT ["php", "artisan"]
 CMD ["--help"]
