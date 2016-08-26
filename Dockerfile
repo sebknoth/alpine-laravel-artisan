@@ -10,9 +10,10 @@ RUN apk upgrade -U && \
     php7-pgsql \
     php7-redis \
     php7-sqlite3 \
+    php7-mbstring \
+    php7-iconv \
     php7-gd
 
-# Small fixes
 RUN rm -fr /var/cache/apk/*
 
 WORKDIR /usr/share/nginx/html
